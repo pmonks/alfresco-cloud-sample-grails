@@ -30,13 +30,10 @@ Pre-requisites
 
 Note: there may be a Grails plugin or two required as well (I was mucking about with a few of those, and you'll see artifacts of that scattered through the source code / configuration files).  I don't believe the current version of the code is actually using any of those plugins, but I may be wrong.
 
-Installation
-------------
-1. Unzip this ZIP file somewhere convenient
-
 Registering a new app
 ---------------------
 In the Alfresco Developer Portal, register a new application with the following details:
+
 1. Application Information Tab:
    Application Name: alfresco-cloud-sample-grails
    Platform: Java
@@ -49,6 +46,7 @@ In the Alfresco Developer Portal, register a new application with the following 
 Configuration
 -------------
 In your favourite text editor, make the following edits:
+
 1. Copy ./grails-app/conf/publicapitest-config.properties.sample to ./grails-app/conf/publicapitest-config.properties
 2. In ./grails-app/conf/publicapitest-config.properties:
    Set the value of the "alfresco.oauth.apikey" property to the API key of the new app in the developer portal

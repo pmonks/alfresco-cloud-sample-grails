@@ -54,13 +54,13 @@ In your favourite text editor, make the following edits:
 
 Starting the app
 ----------------
-bash-3.2$ grails
-<grails status messages removed for clarity>
-grails> clean
-<grails status messages removed for clarity>
-grails> run-app
-<grails status messages removed for clarity - note: you may receive one deprecation warning at this step>
-grails>
+    bash-3.2$ grails
+    [grails status messages removed for clarity]
+    grails> clean
+    [grails status messages removed for clarity]
+    grails> run-app
+    [grails status messages removed for clarity - note: you may receive one deprecation warning at this step]
+    grails>
 
 Using the app
 -------------
@@ -72,15 +72,15 @@ Using the app
 
 Stopping the app
 ----------------
-grails> exit
-<grails status messages removed for clarity>
-grails>
+    grails> exit
+    [grails status messages removed for clarity]
+    grails>
 
 Exiting grails
 --------------
-grails> exit
-<grails status messages removed for clarity>
-bash-3.2$
+    grails> exit
+    [grails status messages removed for clarity]
+    bash-3.2$
 
 Some code details
 -----------------

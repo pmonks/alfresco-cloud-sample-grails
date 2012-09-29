@@ -3,6 +3,8 @@ alfresco-cloud-sample-grails
 
 A sample Grails application that runs against the Alfresco Cloud.  The primary purpose of this app is to demonstrate the OAuth2 flow end-to-end.
 
+This package includes two copies of the app - one ("direct") that handles the OAuth and API flows itself via direct HTTP calls, and a second ("spring-social-alfresco") that instead uses the spring-social-alfresco library.
+
 Author
 ------
 Peter Monks (pmonks@gmail.com)
@@ -13,11 +15,11 @@ Apache 2.0 - see COPYING for full details.
 
 Disclaimer
 ----------
-This is the first Grails app I've ever written, so it's probably a steaming pile of crap from a Grails best practices perspective.  I don't care.  My primary goal was to stand up a webapp quickly (which Grails succeeded at - yay!) - learning Grails was a secondary goal.
+This is the first Grails app I've ever written, so it's probably a steaming pile from a Grails best practices perspective.  This concerns me not - my primary goal was to stand up a webapp quickly (which Grails succeeded at - yay!) - learning Grails was a secondary goal.
 
 Description
 -----------
-A sample Grails app that demonstrates the use of OAuth2 to connect to the Alfresco Cloud's Public APIs.  It calls read-only APIs only (the "list networks" API, specifically), so is safe for use against your Alfresco Cloud account.
+A sample Grails app that demonstrates the use of OAuth2 to connect to the Alfresco Cloud's Public APIs.  It calls read-only APIs only (the "list networks" and "list sites" APIs, specifically), so is safe for use against your Alfresco Cloud account.
 
 Note: it does _not_ fully implement all of the OAuth2 flows - in particular the refresh flows (for both access tokens and refresh tokens) aren't implemented yet.  YMMV!
 
@@ -54,6 +56,7 @@ In your favourite text editor, make the following edits:
 
 Starting the app
 ----------------
+Change into the appropriate directory (direct or spring-social-alfresco)
     bash-3.2$ grails
     [grails status messages removed for clarity]
     grails> clean
@@ -84,7 +87,7 @@ Exiting grails
 
 Some code details
 -----------------
-Despite all the crap that Grails generated, the custom code in this app is pretty simple.  There is a single controller containing all the logic:
+Despite all the stuff that Grails generated, the custom code in this app is pretty simple.  There is a single controller containing all the logic:
 
     ./grails-app/controllers/publicapitest/OauthController.groovy
 
@@ -93,10 +96,11 @@ And two views that define the main page and the callback (which is briefly shown
     ./grails-app/views/oauth/index.gsp
     ./grails-app/views/oauth/callback.gsp
 
-Feel free to have a poke around - Peter is a complete Grails n00b (this is literally his first time using it), so this app is probably a steaming pile of horseshit from a "Grails best practices" perspective.
+Feel free to suggest improvements!
 
 TODOs
 -----
 * Add support for the OAuth refresh flow - currently the access token will timeout after one hour, and you'll need to reset the access token and re-run the OAuth flow to continue.
-* When a network is clicked, show the details about that network, along with the list of sites within it that the user has access to.  Would be nice to allow the user to drill down into the document library (using CMIS) and show the folder/file hierarchy as well.
+* Properly support paging (currently only the first page is displayed).
+* Continue linking to and displaying the site hierarchy, document library folder hierarchy, and files within the folders.  Note: this will also demonstrate how to use the CMIS APIs within a client app.
 

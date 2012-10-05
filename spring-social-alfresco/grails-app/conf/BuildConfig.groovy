@@ -34,7 +34,7 @@ grails.project.dependency.resolution = {
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.
         runtime 'org.springframework.social:spring-social-core:1.0.2.RELEASE'
-        runtime 'org.springframework.social:spring-social-alfresco:0.1.1-SNAPSHOT'
+        runtime 'org.springframework.social:spring-social-alfresco:0.2.1-RELEASE'
         runtime 'org.codehaus.jackson:jackson-mapper-asl:1.8.3'
         // runtime 'mysql:mysql-connector-java:5.1.20'
     }

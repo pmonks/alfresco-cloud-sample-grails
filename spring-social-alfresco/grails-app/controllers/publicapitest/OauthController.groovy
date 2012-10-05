@@ -53,7 +53,7 @@ class OauthController {
       if (session["accessGrant"]) {
         // Authenticated, display networks
         def alfrescoApi = alfrescoApi(session["accessGrant"])
-        def networks    = alfrescoApi.networks.getList().entries  // Note: can't use "list" since Groovy matches that to "isList()" instead of "getList()"
+        def networks    = alfrescoApi.networks.entries
 
         [
           authenticated : true,
@@ -99,8 +99,8 @@ class OauthController {
 
       if (alfrescoApi)
       {
-        def networkInfo = alfrescoApi.getNetwork(networkId).getEntry()
-        def sites       = alfrescoApi.getSites(networkId).getList().entries
+        def networkInfo = alfrescoApi.getNetwork(networkId)
+        def sites       = alfrescoApi.getSites(networkId).entries
 
         [
           authenticated : true,

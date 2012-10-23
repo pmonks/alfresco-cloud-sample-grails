@@ -21,7 +21,7 @@ Description
 -----------
 A sample Grails app that demonstrates the use of OAuth2 to connect to the Alfresco Cloud's Public APIs.  It calls read-only APIs only (the "list networks" and "list sites" APIs, specifically), so is safe for use against your Alfresco Cloud account.
 
-Note: it does _not_ fully implement all of the OAuth2 flows - in particular the refresh flows (for both access tokens and refresh tokens) aren't implemented yet.  YMMV!
+Note: it does _not_ fully implement all of the OAuth2 flows - in particular the access token refresh flow isn't implemented yet.  YMMV!
 
 Pre-requisites
 --------------
@@ -57,6 +57,7 @@ In your favourite text editor, make the following edits:
 Starting the app
 ----------------
 Change into the appropriate directory (direct or spring-social-alfresco)
+
     bash-3.2$ grails
     [grails status messages removed for clarity]
     grails> clean

@@ -30,11 +30,12 @@ grails.project.dependency.resolution = {
         //mavenRepo "http://repository.codehaus.org"
         //mavenRepo "http://download.java.net/maven/2/"
         //mavenRepo "http://repository.jboss.com/maven2/"
+        mavenRepo "https://artifacts.alfresco.com/nexus/content/groups/public/"   // This shouldn't be necessary if it's in ~/.m2/settings.xml
     }
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.
         runtime 'org.springframework.social:spring-social-core:1.0.2.RELEASE'
-        runtime 'org.springframework.social:spring-social-alfresco:0.2.1-RELEASE'
+        runtime 'org.springframework.social:spring-social-alfresco:0.2.4-RELEASE'
         runtime 'org.codehaus.jackson:jackson-mapper-asl:1.8.3'
         // runtime 'mysql:mysql-connector-java:5.1.20'
     }

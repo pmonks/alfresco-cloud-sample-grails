@@ -1,9 +1,7 @@
 alfresco-cloud-sample-grails
 ============================
 
-A sample Grails application that runs against the Alfresco Cloud.  The primary purpose of this app is to demonstrate the OAuth2 flow end-to-end.
-
-This package includes two copies of the app - one ("direct") that handles the OAuth and API flows itself via direct HTTP calls, and a second ("spring-social-alfresco") that instead uses the spring-social-alfresco library.
+A sample Grails application that runs against the Alfresco Cloud.  The primary purpose of this app is to demonstrate the OAuth2 flow end-to-end, using the spring-social-alfresco library.
 
 Author
 ------
@@ -15,7 +13,7 @@ Apache 2.0 - see COPYING for full details.
 
 Disclaimer
 ----------
-This is the first Grails app I've ever written, so it's probably a steaming pile from a Grails best practices perspective.  This concerns me not - my primary goal was to stand up a webapp quickly (which Grails succeeded at - yay!) - learning Grails was a secondary goal.
+This is the first Grails app I've ever written, so it's probably a steaming pile from a Grails best practices perspective.  This doesn't concern me - my primary goal was to stand up a webapp quickly (which Grails succeeded at - yay!) - learning Grails was a secondary goal.
 
 Description
 -----------
@@ -27,7 +25,7 @@ Pre-requisites
 --------------
 1. A 1.6 (or better) JVM installed
 2. Groovy v2.0 (or better) installed - see http://groovy.codehaus.org/
-3. Grails v2.1 (or better) installed - see http://grails.org/
+3. Grails v2.2 (or better) installed - see http://grails.org/
 4. A developer account setup on the Alfresco Developer Portal: https://developer.alfresco.com/
 
 Note: there may be a Grails plugin or two required as well (I was mucking about with a few of those, and you'll see artifacts of that scattered through the source code / configuration files).  I don't believe the current version of the code is actually using any of those plugins, but I may be wrong.
@@ -43,14 +41,14 @@ In the Alfresco Developer Portal, register a new application with the following 
 2. API Management Tab:
    Current APIs: Alfresco Public API
 3. Auth Tab:
-   Callback URL: http://localhost:8080/publicapitest/oauth/callback
+   Callback URL: http://localhost:8080/alfresco-cloud-sample-grails/oauth/callback
 
 Configuration
 -------------
 In your favourite text editor, make the following edits:
 
-1. Copy ./grails-app/conf/publicapitest-config.properties.sample to ./grails-app/conf/publicapitest-config.properties
-2. In ./grails-app/conf/publicapitest-config.properties:
+1. Copy ./alfresco-cloud-sample-grails-config.properties.sample to ./alfresco-cloud-sample-grails-config.properties
+2. In ./alfresco-cloud-sample-grails-config.properties:
    Set the value of the "alfresco.oauth.apikey" property to the API key of the new app in the developer portal
    Set the value of the "alfresco.oauth.secret" property to the secret of the new app in the developer portal
 
@@ -68,7 +66,7 @@ Change into the appropriate directory (direct or spring-social-alfresco)
 
 Using the app
 -------------
-1. Navigate to http://localhost:8080/publicapitest/oauth in your browser
+1. Navigate to http://localhost:8080/alfresco-cloud-sample-grails/oauth/ in your browser
 2. Click the "here" link
 3. In the popup window, login with your Alfresco Cloud credentials (note: _not_ your Developer Portal credentials - this is an end user login, not a developer login)
 4. Click "allow"
@@ -76,7 +74,7 @@ Using the app
 
 Stopping the app
 ----------------
-    grails> exit
+    grails> stop-app
     [grails status messages removed for clarity]
     grails>
 

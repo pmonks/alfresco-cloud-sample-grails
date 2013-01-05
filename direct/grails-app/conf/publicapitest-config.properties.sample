@@ -1,5 +1,0 @@
-# In order for this application to function, you need to copy this file to
-# publicapitest-config.properties, then paste in your own API key and secret
-# (obtained from https://developer.alfresco.com/).
-alfresco.oauth.apikey = <your API key>
-alfresco.oauth.secret = <your secret>

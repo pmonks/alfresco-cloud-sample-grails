@@ -13,7 +13,7 @@ Apache 2.0 - see COPYING for full details.
 
 Disclaimer
 ----------
-This is the first Grails app I've ever written, so it's probably a steaming pile from a Grails best practices perspective.  This doesn't concern me - my primary goal was to stand up a webapp quickly (which Grails succeeded at - yay!) - learning Grails was a secondary goal.
+This is the first Grails app I've ever written, so it's probably a steaming pile from a Grails best practices perspective.  This doesn't particularly concern me - my primary goal was to stand up a webapp quickly (which Grails succeeded at - yay!) - learning Grails was a secondary goal.
 
 Description
 -----------
